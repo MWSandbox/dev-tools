@@ -2,7 +2,7 @@
 # Sets up a hook for the docker version of pre-commit-terraform (https://github.com/antonbabenko/pre-commit-terraform)
 readonly HOOK_PATH="./../.git/hooks/pre-commit"
 readonly CONTAINER_NAME="pre-commit"
-readonly IMAGE_NAME="pre-commit"
+readonly IMAGE_NAME="ghcr.io/antonbabenko/pre-commit-terraform:latest"
 readonly REPO_PATH=$(git rev-parse --show-toplevel) 
 readonly INFRACOST_API_KEY_LOCATION="$HOME/.config/infracost/credentials.yml"
 readonly INFRACOST_API_KEY=$(grep "^api_key:" "${INFRACOST_API_KEY_LOCATION}"| cut -c10-)
